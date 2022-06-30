@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpClientWithExtensions", "HttpClientWithExtensions\HttpClientWithExtensions.csproj", "{AFBC5FCD-587E-4505-A25D-838FFBE0DA62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpClientWithExtensions.Api", "HttpClientWithExtensions.Api\HttpClientWithExtensions.Api.csproj", "{CAABF0FC-A60D-47D5-9E72-2FEF15D85862}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFBC5FCD-587E-4505-A25D-838FFBE0DA62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFBC5FCD-587E-4505-A25D-838FFBE0DA62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFBC5FCD-587E-4505-A25D-838FFBE0DA62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFBC5FCD-587E-4505-A25D-838FFBE0DA62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAABF0FC-A60D-47D5-9E72-2FEF15D85862}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAABF0FC-A60D-47D5-9E72-2FEF15D85862}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAABF0FC-A60D-47D5-9E72-2FEF15D85862}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAABF0FC-A60D-47D5-9E72-2FEF15D85862}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B8726CF-B55F-4A90-BE46-C7325673AD89}
+	EndGlobalSection
+EndGlobal
