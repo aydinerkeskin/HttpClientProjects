@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Order.Api.Model;
 using Order.Api.Service;
 using System;
 using System.Collections.Generic;
@@ -45,6 +46,25 @@ namespace Order.Api.Controllers
             _weatherForecastService.Add(weatherForecast);
 
             return _weatherForecastService.GetList();
+        }
+
+        [HttpPost("GenerateVeryLargeWeatherForecasts")]
+        [HttpPost]
+        public IEnumerable<WeatherForecast> GenerateVeryLargeWeatherForecasts([FromBody] GenerateVeryLargeWeatherForecastRequest request)
+        {
+            var result = new List<WeatherForecast>();
+
+            for (int i = 0; i < request.Size; i++)
+            {
+                result.Add(new WeatherForecast
+                { 
+                    Date = DateTime.Now,
+                    Summary = $"Summary-{i}",
+                    TemperatureC = i
+                });
+            }
+
+            return result;
         }
     }
 }

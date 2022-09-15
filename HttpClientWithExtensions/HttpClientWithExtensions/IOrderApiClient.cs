@@ -10,5 +10,6 @@ namespace HttpClientWithExtensions
     {
         Task<List<WeatherForecast>> GetRandomWeatherForecasts();
         Task<List<WeatherForecast>> InsertWeatherForecast(WeatherForecast weatherForecast);
+        Task<List<WeatherForecast>> GenerateVeryLargeWeatherForecasts(GenerateVeryLargeWeatherForecastRequest request);
     }
 }

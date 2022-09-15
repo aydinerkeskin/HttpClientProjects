@@ -36,7 +36,7 @@ namespace HttpClientWithExtensions
             {
                 c.BaseAddress = new Uri(config.BaseAddress);
                 c.Timeout = TimeSpan.FromSeconds(config.HttpClientTimeout);
-            }).ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler
+            }).ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler //TODO: local process close on production!
             {
                 ClientCertificateOptions = ClientCertificateOption.Manual,
                 ServerCertificateCustomValidationCallback = (httpRequestMessage, cert, cetChain, policyErrors) => { return true; }

@@ -46,5 +46,21 @@ namespace HttpClientWithExtensions.Api.Controllers
                 TemperatureC = s.TemperatureC
             }).ToList();
         }
+
+        [HttpGet("GenerateVeryLargeWeatherForecasts")]
+        public async Task<List<WeatherForecast>> GenerateVeryLargeWeatherForecasts(int size)
+        {
+            var serviceResult = await _orderApiClient.GenerateVeryLargeWeatherForecasts(new Model.GenerateVeryLargeWeatherForecastRequest
+            {
+                Size = size > 0 ? size : 100
+            });
+
+            return serviceResult.Select(s => new WeatherForecast
+            {
+                Date = s.Date,
+                Summary = s.Summary,
+                TemperatureC = s.TemperatureC
+            }).ToList();
+        }
     }
 }
